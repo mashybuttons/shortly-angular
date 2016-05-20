@@ -2,7 +2,33 @@ angular.module('shortly.services', [])
 
 .factory('Links', function ($http) {
   // Your code here
+  var getAll = function () {
+    return $http({
+      method: 'GET',
+      url: '/api/links'
+    }).then(function sucesss(result) {
+      return result.data;
+    }, function error(err) {
+      console.log(err);
+    });
+    // $http.get('/api/links').then(function(result) {
+    //   console.log(result);
+    // }, function(error) {
+    //   console.log(error);
+    // });
+    // hello
+  };
+
+  var addOne = function () {
+
+  };
+
+  return {
+    getAll: getAll,
+    addOne: addOne
+  };
 })
+
 .factory('Auth', function ($http, $location, $window) {
   // Don't touch this Auth service!!!
   // it is responsible for authenticating our user
