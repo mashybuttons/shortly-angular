@@ -4,20 +4,24 @@
     <meta charset="utf-8" />
     <title>Shortly</title>
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
   </head>
   <body>
     <h1>Shortly</h1>
 
     <!-- the ng-view directive is where our templates will be loaded into when naviagted to -->
+    <p><a href='#/signin'>Sign in</a></p>
+    <p><a href='#/signup'>Sign Up</a></p>
+    <p><a href='#/links'>Links</a></p>
+    <p><a href='#/shorten'>Shorten</a></p>
     <div ng-view></div>
 
-    <script src="lib/angular/angular.js"></script>
-    <script src="lib/angular-route/angular-route.js"></script>
 
+    <script src="app/app.js"></script>
     <script src="app/auth/auth.js"></script>
     <script src="app/links/links.js"></script>
     <script src="app/shorten/shorten.js"></script>
     <script src="app/services/services.js"></script>
-    <script src="app/app.js"></script>
   </body>
 </html>
