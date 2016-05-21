@@ -24,7 +24,8 @@ angular.module('shortly', [
     })
     .when('/shorten', {
       templateUrl: 'app/shorten/shorten.html',
-      controller: 'ShortenController'
+      controller: 'ShortenController',
+      authenticate: true
     });
     // Your code here
 
