@@ -50,6 +50,7 @@ module.exports = {
         }
       })
       .fail(function (error) {
+        console.log("IM THE ERR in newLink", error)
         next(error);
       });
   },

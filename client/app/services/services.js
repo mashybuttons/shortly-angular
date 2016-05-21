@@ -16,13 +16,19 @@ angular.module('shortly.services', [])
   };
 
   var addOne = function (data) {
+    console.log("IM THE DATa", data);
     return $http({
       method: 'POST',
       url: '/api/links',
       data: data
     })
     .then(function (resp) {
+      console.log("I POSTED", resp);
       return resp;
+    })
+    .catch(function(err) {
+      console.log("I DID NOT POST", err);
+      console.error(err);
     });
   };
 

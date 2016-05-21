@@ -9,7 +9,7 @@ angular.module('shortly.shorten', [])
         console.log(result);
       })
       .catch(function(err) {
-        console.err(err);
+        console.error(err);
       });
   };
 });

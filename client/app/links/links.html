@@ -1,4 +1,10 @@
 <div id='container' ng-controller='LinksController'>
-{{updateData}}
+
+<h2> Links </h2>
+<!-- {{updateData()}} -->
+<ul>
+  <li ng-repeat='link in data.links'>{{link.url}}</li>
+</ul>
+
   <!-- Your html here -->
-</div>
+</div> 
